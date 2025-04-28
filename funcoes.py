@@ -67,3 +67,16 @@ def calcula_pontos_sequencia_alta (lista):
         return 30
     else: 
         return 0
+    
+def calcula_pontos_full_house(lista):
+    Trinca = False
+    Par = False
+    for valor in lista:
+        if lista.count(valor) == 3:
+            Trinca = True
+        if lista.count(valor) == 2:
+            Par = True
+    if Trinca == True and Par == True:
+        return calcula_pontos_soma(lista)
+    else:
+        return 0
