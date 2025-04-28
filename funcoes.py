@@ -25,3 +25,9 @@ def calcula_pontos_regra_simples (dados_rolados):
            if dado == valor_dado:
                pontuacao_dados[valor_dado] += dado
     return pontuacao_dados  
+
+def calcula_pontos_soma(lista):
+    pontuacao = 0
+    for valor in lista:
+        pontuacao += valor
+    return pontuacao
