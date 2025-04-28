@@ -17,3 +17,11 @@ def remover_dado(dados_rolados, dados_no_estoque, dado_para_remover):
     dados_no_estoque.pop(dado_para_remover)
     lista = [dados_rolados, dados_no_estoque]
     return lista
+
+def calcula_pontos_regra_simples (dados_rolados):
+    pontuacao_dados = {1:0, 2:0, 3:0, 4:0, 5:0, 6:0}
+    for dado in dados_rolados:
+        for valor_dado in pontuacao_dados.keys():
+           if dado == valor_dado:
+               pontuacao_dados[valor_dado] += dado
+    return pontuacao_dados  
