@@ -6,3 +6,8 @@ def rolar_dados(numero):
         n = randint(1, 6)
         lista.append(n)
     return lista
+
+def guardar_dado(dados_rolados, dados_guardados, indice):
+    dado = dados_rolados.pop(indice)
+    dados_guardados.append(dado)
+    return [dados_rolados, dados_guardados] 
