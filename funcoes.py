@@ -80,3 +80,13 @@ def calcula_pontos_full_house(lista):
         return calcula_pontos_soma(lista)
     else:
         return 0
+
+def calcula_pontos_quadra (lista):
+    quadra = False
+    for valor in lista:
+        if lista.count(valor) >= 4:
+            quadra = True
+    if quadra == True:
+        return calcula_pontos_soma(lista)
+    else:
+        return 0
