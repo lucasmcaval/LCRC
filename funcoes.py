@@ -100,3 +100,21 @@ def calcula_pontos_quina (lista):
         return 50
     else:
         return 0
+    
+def calcula_pontos_regra_avancada(lista):
+    dic = {
+    'cinco_iguais': 0,
+    'full_house': 0,
+    'quadra': 0,
+    'sem_combinacao': 0,
+    'sequencia_alta': 0,
+    'sequencia_baixa': 0
+}
+    dic['cinco_iguais'] = calcula_pontos_quina(lista)
+    dic['full_house'] = calcula_pontos_full_house(lista)
+    dic["quadra"] = calcula_pontos_quadra(lista)
+    dic['sem_combinacao'] = calcula_pontos_soma(lista)
+    dic['sequencia_alta'] = calcula_pontos_sequencia_alta(lista)
+    dic['sequencia_baixa'] = calcula_pontos_sequencia_baixa(lista)
+    
+    return dic
