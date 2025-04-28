@@ -49,3 +49,21 @@ def calcula_pontos_sequencia_baixa(lista):
         return 15
     else: 
         return 0
+    
+def calcula_pontos_sequencia_alta (lista):
+    sequencia = 1
+    maior_sequencia = 1
+    lista = list(set(lista))
+    lista.sort()
+    for i in range(len(lista) - 1):
+        if lista[i + 1] == lista[i] + 1:
+            sequencia += 1
+            if sequencia > maior_sequencia:
+                    maior_sequencia = sequencia
+        else:
+            sequencia = 1
+            
+    if sequencia >= 5 or maior_sequencia >= 5:
+        return 30
+    else: 
+        return 0
