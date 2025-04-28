@@ -90,3 +90,13 @@ def calcula_pontos_quadra (lista):
         return calcula_pontos_soma(lista)
     else:
         return 0
+
+def calcula_pontos_quina (lista):
+    quina = False
+    for valor in lista:
+        if lista.count(valor) >= 5:
+            quina = True
+    if quina == True:
+        return 50
+    else:
+        return 0
